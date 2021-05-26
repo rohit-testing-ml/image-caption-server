@@ -1,3 +1,4 @@
+-f https://download.pytorch.org/whl/torch_stable.html
 Flask==2.0.1
 pandas==1.2.4
 torchvision==0.9.1+cpu
@@ -6,3 +7,4 @@ requests==2.25.1
 torch==1.8.1+cpu
 gdown==3.13.0
 Pillow==8.2.0
+gunicorn==20.0.4
