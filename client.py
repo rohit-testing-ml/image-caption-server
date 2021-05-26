@@ -9,9 +9,8 @@ pd.set_option('display.max_colwidth', None)
 
 import requests
 
-server1_url = 'http://127.0.0.1:5000/foo'
-server2_url = 'http://127.0.0.1:5001/foo'
-# myobj = {'somekey': 'somevalue'}
+server1_url = 'https://image-caption-server1.herokuapp.com/foo'
+server2_url = 'https://image-caption-sever2.herokuapp.com//foo'
 
 def predict(image_file_name):
 
