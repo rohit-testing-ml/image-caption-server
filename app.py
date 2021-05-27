@@ -12,19 +12,25 @@ st.set_page_config(
 
 st.title("Image Captioning using CNN and Transformer ")
 
-st.markdown('#### In this project we have implemented the encoder decoder network')
+st.markdown('#### In this project we have implemented the encoder decoder network for image caption generation')
 st.markdown('#### The CNN model act as Encoder and the Transformer Decoder act as an Decoder')
-st.text('')
-st.text('')
+
 
 from PIL import Image
 
 image = Image.open('cnn_transformer.jpg')
 st.image(image, use_column_width=True)
 
-st.markdown('#### How the model is deployed')
-st.markdown('#### The encoder part i.e. CNN is deployed as a REST service in server 1')
-st.markdown('#### The decoder part i.e. Transformers Decoder  is deployed as a REST service in server 2')
+st.markdown('#### How the model is deployed ?')
+st.markdown('#### The encoder part i.e. CNN is deployed as a REST service in SERVER 1')
+st.markdown('#### The decoder part i.e. Transformers Decoder  is deployed as a REST service in SERVER 2')
+
+html_string = "<br><br>"
+
+st.markdown(html_string, unsafe_allow_html=True)
+image = Image.open('diagram.jpg')
+image=image.resize((500,500))
+st.image(image,caption='API Diagram')
 
 
 def call_function(a):
@@ -35,7 +41,9 @@ def call_function(a):
     st.markdown('### '+prediction)
 
 
-st.markdown('### \n\n\n')
+html_string = "<br><br>"
+
+st.markdown(html_string, unsafe_allow_html=True)
 col1, col2 = st.beta_columns(2)
 
 
@@ -76,11 +84,3 @@ with col2:
 html_string = "<br><br>"
 
 st.markdown(html_string, unsafe_allow_html=True)
-st.markdown('## Upload a photo to generate caption')
-uploaded_file = st.file_uploader("Upload an image...", type="jpg")
-if uploaded_file is not None:
-    image = Image.open(uploaded_file)
-    # print(image)
-    st.image(image, caption='uploaded image')
-    image.save('upload.jpg')
-    call_function('upload.jpg')
