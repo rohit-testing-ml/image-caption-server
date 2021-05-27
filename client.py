@@ -10,7 +10,7 @@ pd.set_option('display.max_colwidth', None)
 import requests
 
 server1_url = 'https://image-caption-server1.herokuapp.com/foo'
-server2_url = 'https://image-caption-sever2.herokuapp.com//foo'
+server2_url = 'https://image-caption-sever2.herokuapp.com/foo'
 
 def predict(image_file_name):
 
